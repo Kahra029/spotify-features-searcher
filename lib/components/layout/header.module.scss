@@ -1,0 +1,33 @@
+@use "../../../styles/theme";
+@use "../../../styles/mixins";
+
+.headerContainer {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    .headerContent {
+        @include mixins.iconContainer();
+        display: flex;
+        height: 100%;
+        align-items: center;
+        .logoutButton {
+            height: 40px;
+            width: 100px;
+            margin-right: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            border: theme.$border-base;
+            cursor: pointer;
+            .buttonText {
+                font-size: 18px;
+                color: theme.$text-color;
+            }
+        }
+        .headerTitle {
+            font-size: 36px;
+            font-weight: bold;
+        }
+    }
+}

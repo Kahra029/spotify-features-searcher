@@ -1,0 +1,69 @@
+@use '../../../../styles/theme';
+@use '../../../../styles/mixins';
+
+.trackCardContainer {
+    width: 100%;
+    height: 80px;
+    padding: 5px;
+    border-bottom: theme.$border-base;
+    box-sizing: border-box;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    color: theme.$text-color;
+    &:hover{
+        background-color: theme.$hovering-color;
+    }
+    .trackContainer {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px;
+        .coverContainer {
+            margin-right: 10px;
+            position: relative;
+            .cover {
+                height: 70px;
+                width: 70px;
+            }
+            .buttonContainer {
+                position: absolute;
+                height: 70px;
+                width: 70px;
+            }
+        }
+        .trackInfoContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .trackName {
+                font-size: 16px;
+            }
+            .artists {
+                margin-top: 5px;
+                font-size: 14px;
+            }
+            .features {
+                display: flex;
+                margin-top: 5px;
+                font-size: 12px;
+                div {
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    .durationTimeContainer{
+        justify-content: flex-end;
+    }
+    .linksContainer {
+        width: 105px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 0px;
+        @include mixins.iconContainer(25px, 25px);
+    }
+}

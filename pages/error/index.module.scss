@@ -1,0 +1,44 @@
+@use "../../styles/theme";
+@use "../../styles/mixins";
+
+.wrapper {
+    width: theme.$wrapper-width;
+    .main {
+        width: 630px;
+        margin: auto;
+        .titles {
+            text-align: center;
+            .title {
+                font-size: 56px;
+                font-weight: bold;
+            }
+            .subTitle {
+                font-size: 30px;
+                margin-top: 10px;
+                a {
+                    color: #2d2dff;
+                    text-decoration: underline;
+                }
+            }
+        }
+        .content{
+            .returnButton {
+                display: flex;
+                height: 50px;
+                width: 200px;
+                margin: auto;
+                margin-top: 20px;
+                background-color: theme.$spotify-color;
+                border-radius: 8px;
+                border: none;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                .buttonText {
+                    font-size: 24px;
+                    color: theme.$text-color;
+                }
+            }
+        }
+    }
+}

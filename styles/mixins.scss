@@ -1,0 +1,9 @@
+@mixin iconContainer($height: 30px, $width: 30px, $color: #000) {
+    .icon {
+        height: $height;
+        width: $width;
+        margin-right: 10px;
+        color: $color;
+        cursor: pointer;
+    }
+}

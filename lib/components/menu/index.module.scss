@@ -1,0 +1,15 @@
+@use '../../../styles/theme';
+@use '../../../styles/mixins';
+
+.wrapper{
+    .menu{
+        border-radius: 4px;
+        .menuItem{
+            height: 40px;
+        }
+        .subMenu{
+            height: 40px;
+        }
+    }
+    @include mixins.iconContainer(25px, 25px);
+}
